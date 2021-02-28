@@ -1,0 +1,18 @@
+1.
+a.	Correct
+b.	Error   整數型態Int無法對應到5.6（有小數點）
+c.	Correct
+d.	Error   字串String不能是null
+e.	Correct
+f.	Error   List<String>? 表示這個List裡面只能存放String且不能是null
+g.  Correct
+h.	Error   當list中可儲存String或Null時，再次呼叫須加上”?”或”!!”
+i.	Correct
+
+
+2.
+C, 題目這段程式會檢查message此變數的字串長度，根據不同長度輸出不同內容。而題目的message字串長39，因此符合 1..39 這個條件而輸出Your grace。
+
+
+3. 
+D, 要得到題目的結果，array應該要是一個陣列儲存 [1, 1000^1, … , 1000^5 ]，因此先建立一個長度為6的陣列，裡面的數字則為1000^0到1000^5。（而非6個1000^10）
