@@ -1,0 +1,25 @@
+1. What is Inheritance?
+inheritance是指一個物件從另一個物件繼承、取得他的屬性、函數等，因此新的子物件就不需要再次宣告相同的東西，並且還可以再實踐出自己的特性等。
+
+2.How to ​split​ a string in Android?
+可以用內建函數split()去切開一段文字。split()裡面傳入要切開文字的關鍵字，而這個結果會被儲存成一個陣列。
+	val sentence = "goooooAgle"
+	val sentence_split = sentence.split('A')
+
+	// sentence_split = [ "gooooo", "gle" ]
+
+3.What kind of ​key-value​ pair collection do we use in Android? Attach a sample code that uses for-loop to print each key-value pair.
+Map
+	val mapOfGrade = mapOf( "A" to 100, "B" to 80, "C" to 60 )
+	for(grade in mapOfGrade){
+		println("${grade.key} : ${grade.value}")
+	}
+
+4. What’s the ​difference​ between ArrayList and LinkedList?
+arraylist在記憶體的存放是保留一整個連續的空間，linkedlist則是裡面的每個物件散落各地，但都同時儲存著下一個物件的位置。因此在取arraylist的值時可以直接讀取到那個位置，相反的linkedlist則要從開始的物件一路往後尋找、直到需要的物件。（例如要找第三個人，就要先問第一個人下個人的地址、再去第二個人問第三個人的地址）
+
+5.What are ​Value Type​ variables? List out the Value Type variables you know.
+Value Type是指在宣告一個變數時，會給他記憶體的一個位置、儲存給定的值，並且這個變數指向這個地址。是Value Type的有Int整數, Float浮點數, boolean布林...。
+
+6.What’s the ​maximum​ value of ​Int​? If you want to represent integers larger than the limit,what should you do instead of using int variables?
+因為一個整數是由4 byte(32 bits)儲存，因此最大的整數會是2^31-1（扣掉的是0），如果需要超過這個的數字可以改用Long，是由64bits儲存。
