@@ -1,0 +1,28 @@
+1. What is Encapsulation? List the benefits.
+封裝會把物件的資料隱藏、保護起來，從外面時只會知道有哪些東西可以使用，而不需要知道運算的內容或甚至改動到他。
+	a.可以保護資料，不會被外面、或不想要的使用者更動到
+	b.容易維護程式碼，出現問題時可以直接回去找封裝的物件
+
+2. What is enum?
+有些Class的物件就只有固定的幾個，這時候就可以用Enum列舉的方式。
+例如學校成績只分A~F、紅綠燈燈號只有紅黃綠。
+
+3. How to use enum?
+enum class StarSign(){
+	ARIES, TAURUS, GEMINI, CANCER, LEO, VIRGO,
+	LIBRA, SCORPIO, SAGITTARIUS, CAPRICORN, AQUARIUS, PISCES;
+	
+	fun getName() = name.toLowerCase()
+};
+
+var myStarSign: StarSign = StarSign.SCORPIO
+if(myStarSign == StarSign.SCORPIO){
+	println("you are ${StarSign.SCORPIO.name}")}
+
+4. difference between LinearLayout & RelativeLayout
+LinearLayout又可以分成垂直或水平，如果是垂直的話就表示畫面垂直下來每一行都只會有一個view，且不限於這些view的寬度多少；而水平布局也是同概念。
+RelativeLayout則是每一個view的位置都是根據另一個view(或parent view)而定的，例如可以置中對齊、靠某個元素的右、靠左等。
+因為relative layout每個view都是相對的，對於不同尺寸的螢幕、解析度來說比較不會有跑版的狀況
+
+5. benefit of ConstraintLayout
+ConstraintLayout跟relative類似，可以適應各種解析度；而更重要的是能讓佈局的架構變的扁平，通常要做出複雜的佈局會混用linear和relative（如linear包著relative再包著linear），會導致很深的階層，而constraint不會，可以讓程式比較有效率。
