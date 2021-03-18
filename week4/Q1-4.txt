@@ -1,0 +1,22 @@
+1. What is Polymorphism?
+多型polymorphism指的是我先規定好一個統一的類別，之後使用的人、實例只要有符合我的格式，想要各自有不同的輸出都沒問題。舉例來說有個類別是Shape形狀，裡面有個函式是計算面積。而三角形、圓形、矩形等都是Shape的一種實例，他們都是形狀沒錯，不過彼此計算面積的公式又不一樣。
+
+
+2. 7 lifecycle methods of an Activity
+(i)	onCreate()	整個activity被呼叫的第一次，只會發生一次。
+(ii)	onStart()	回到之前暫時離開的activity，讓使用者可以看得見這個Activity。（visible）
+(iii)	onResume()	讓這個activity可以被執行、可以和他有互動並有作用。
+(iv)	onPause()	讓這個activity還是存在、被看到，但失去可以跟他互動的時候。比如要分享到其他應用程式時，原本的畫面activity就會呼叫onPause。
+(v)	onStop()	暫時離開這個activity，activity會放到背景去，東西並不會被刪除。
+(vi)	onDestroy()	整個activity被關閉，暫存的東西、使用的記憶體也都會被移除掉。
+
+
+3. What is Android Jetpack?
+有點像寫android的超齊全工具箱，裡面有各種大部分的人都會用到的函式庫，讓我們不需要各自寫出同樣功能且同樣code的東西；並且他能相容不同的android版本、裝置。像是Data binding, Room, ViewModel, Layout...都是包含在裡面的東西。
+
+
+4. What is Coroutines? Why we use it?
+讓某些工作在後面運行，而不是浪費時間等待，使其他程序還是可以動作。
+舉例來說領口罩20片143元(?)，排第一的人從口袋裡掏零錢、算錢花了很多時間，於是他對後面的說：我OK你先領，自己先到一旁拿錢算錢，同時間整個排隊的人潮持續被處理。
+
+coroutine可以讓使用者體驗變得流暢。手機APP是一個需要很即時與使用者互動的東西，當app裡面有需要花費大量時間的處理（影像、檔案存取之類）時，如果為了這個耗時的工作而停下整個介面，對使用者來說很容易認為整個app當掉了。因此運用coroutine能夠避免整個應用程式卡住，只為了處理耗時的工作。
